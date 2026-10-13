@@ -1,0 +1,144 @@
+{
+  "info": {
+    "name": "Baozi Store API - Atividade Prática",
+    "description": "Coleção para testar os endpoints da Baozi Store. Execute os POSTs de cliente e produto antes do POST de pedido; confira os IDs retornados.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ],
+  "item": [
+    {
+      "name": "Clientes",
+      "item": [
+        {
+          "name": "POST - Criar cliente",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"PedroLeandroSilva5186859\",\n  \"clienteDesde\": \"2026-10-12\"\n}"
+            },
+            "url": "{{baseUrl}}/api/clientes"
+          }
+        },
+        {
+          "name": "GET - Listar clientes",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/clientes"
+          }
+        },
+        {
+          "name": "GET - Consultar cliente por ID (trocar 1 se necessário)",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/clientes/1"
+          }
+        },
+        {
+          "name": "DELETE - Excluir cliente (trocar 1 se necessário)",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/clientes/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Produtos",
+      "item": [
+        {
+          "name": "POST - Criar produto",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Baozi tradicional\",\n  \"preco\": 8.5,\n  \"estoque\": true\n}"
+            },
+            "url": "{{baseUrl}}/api/produtos"
+          }
+        },
+        {
+          "name": "GET - Listar produtos",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/produtos"
+          }
+        },
+        {
+          "name": "GET - Consultar produto por ID (trocar 1 se necessário)",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/produtos/1"
+          }
+        },
+        {
+          "name": "DELETE - Excluir produto (trocar 1 se necessário)",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/produtos/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pedidos",
+      "item": [
+        {
+          "name": "POST - Criar pedido (ajustar IDs conforme respostas dos POSTs)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"clienteId\": 1,\n  \"produtoId\": 1,\n  \"quantidade\": 3\n}"
+            },
+            "url": "{{baseUrl}}/api/pedidos"
+          }
+        },
+        {
+          "name": "GET - Listar pedidos",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/pedidos"
+          }
+        },
+        {
+          "name": "GET - Consultar pedido por ID (trocar 1 se necessário)",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/pedidos/1"
+          }
+        },
+        {
+          "name": "DELETE - Excluir pedido (trocar 1 se necessário)",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/pedidos/1"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+C:\baozi-store-api\src\main\java\br\com\baozistore\BaoziStoreApplication.java
+C:\baozi-store-api\src\main\java\br\com\baozistore\controller\ClienteController.java
+C:\baozi-store-api\src\main\java\br\com\baozistore\controller\PedidoController.java
+C:\baozi-store-api\src\main\java\br\com\baozistore\controller\ProdutoController.java
+C:\baozi-store-api\src\main\java\br\com\baozistore\model\Cliente.java
+C:\baozi-store-api\src\main\java\br\com\baozistore\model\Pedido.java
+C:\baozi-store-api\src\main\java\br\com\baozistore\model\Produto.java
+C:\baozi-store-api\src\main\java\br\com\baozistore\repository\ClienteRepository.java
+C:\baozi-store-api\src\main\java\br\com\baozistore\repository\PedidoRepository.java
+C:\baozi-store-api\src\main\java\br\com\baozistore\repository\ProdutoRepository.java
